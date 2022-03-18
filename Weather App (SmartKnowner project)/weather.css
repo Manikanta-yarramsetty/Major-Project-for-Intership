@@ -1,0 +1,192 @@
+/* body design (background, background-image, mirror(frost-glass effect) incorporated */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    margin: 0;
+    background: #15141a;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120%;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(1.8px);
+}
+/* --------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------ Date and Time Design ----------------------------------- */
+.clock {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    height: 25vh;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.datetime {
+    color: #fff;
+    background: #10101E;
+    font-family: "Segoe UI", sans-serif;
+    width: 340px;
+    align-items: center;
+    padding: 15px 10px;
+    border: 3px solid #024c85;
+    border-radius: 12px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+.datetime:hover {
+    background: #02233b;
+    box-shadow: 0 0 30px #02233b;
+}
+  
+.date {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+  
+.time {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.time span:not(:last-child) {
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+  
+.time span:last-child {
+    background: #2E94E3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+/* --------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------- Current Weather-Conditions Design ----------------------------- */
+h1.temperature {
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+.condition {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.today_weather {
+    background: #10101E;
+    border: 3px solid #024c85;
+    color: white;
+    padding: 2em;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+.today_weather:hover {
+    background: #02233b;
+    box-shadow: 0 0 30px #02233b;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    outline: none;
+    width: 44px;
+    border: 3px solid #024c85;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+button:hover {
+    background: #7c7c7c6b;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    border: 3px solid #024c85;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100%-100px);
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+.weather.loading::after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 2
+}
+/* --------------------------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------ Future (7-day) Forecast Design ------------------------------- */
+.future_weather{
+    background: #10101E;
+    position: relative;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    top: 20%;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #024c85;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: auto;
+    margin: 0 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+.future_weather:hover {
+    background: #02233b;
+    box-shadow: 0 0 30px #02233b;
+}
+/* --------------------------------------------------------------------------------------------- */

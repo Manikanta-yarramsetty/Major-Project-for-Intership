@@ -1,0 +1,138 @@
+<!-- Weather App for SmartKnower Web Development Major Project -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- reference link for CSS and JavaScript files given in the head of the html document -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="./weather.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+        <script src="./weather.js" defer></script>
+    </head>
+    <!-- Onload function given to body to initialize clock once the code is run -->
+    <body onload="initClock()"> 
+        <!-- (start) div for date and time -->
+        <div class="clock">
+            <div class="datetime">
+              <!-- Date -->  
+              <div class="date">
+                <span id="dayname">Day</span>,
+                <span id="month">Month</span>
+                <span id="daynum">00</span>,
+                <span id="year">Year</span>
+              </div>
+              <!-- Clock -->
+              <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>
+                <span id="period">AM</span>
+              </div>
+            </div>
+        </div>
+        <!-- (end ) -->
+        <!-- (start) div for current weather forecast -->
+        <div class="today_weather">
+            <!-- (start) search-bar design -->
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search">
+                <button>
+                   <!-- icon added for search-bar component in svg format using React-icons -->
+                    <svg stroke="currentColor" 
+                         fill="currentColor" 
+                         stroke-width="0" 
+                         viewBox="0 0 24 24" 
+                         height="1.5em" 
+                         width="1.5em" 
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.94 11c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 
+                                 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 
+                                 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 
+                                 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z">
+                        </path>
+                    </svg>
+                </button>
+            </div><br />
+            <!-- (end) -->
+            <!-- (start) current weather-condition design -->
+            <div class="weather loading">
+                <h2 class="city">Weather in Delhi</h2>
+                <h1 class="temp">0°C</h1>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/02n.png" alt="Error 404" class="icon" />
+                    <div class="description">N/A</div>
+                </div>
+                <div class="humidity">Humidity: 0%</div>
+                <div class="wind">Wind Speed: 0 km/h</div>
+            </div>
+            <!-- (end) -->
+        </div>
+        <!-- (start) future-forecast div (gives temperature at Day and Night) -->
+        <!-- Day-1 forecast -->
+        <div class="future_weather" id="forecast">
+            <div class="Day">Day 1</div>
+                <img src="https://openweathermap.org/img/wn/02n.png" alt="Error 404" class="icon" />
+                <div class="description">N/A</div>
+                  <div class="temp">Day: N/A °C</div>
+                <div class="temp">Night: N/A °C</div>
+        </div>
+        </div>
+        <!-- Day-2 forecast -->
+        <div class="future_weather" id="forecast">
+            <div class="Day">Day 2</div>
+                <img src="https://openweathermap.org/img/wn/02n.png" alt="Error 404" class="icon" />
+                <div class="description">N/A</div>
+                  <div class="temp">Day: N/A °C</div>
+                <div class="temp">Night: N/A °C</div>
+            </div>
+        </div>
+        <!-- Day-3 forecast -->
+        <div class="future_weather" id="forecast">
+            <div class="Day">Day 3</div>
+                <img src="https://openweathermap.org/img/wn/02n.png" alt="Error 404" class="icon" />
+                <div class="description">N/A</div>
+                  <div class="temp">Day: N/A °C</div>
+                <div class="temp">Night: N/A °C</div>
+            </div>
+        </div>
+        <!-- Day-4 forecast -->
+        <div class="future_weather" id="forecast">
+            <div class="Day">Day 4</div>
+                <img src="https://openweathermap.org/img/wn/02n.png" alt="Error 404" class="icon" />
+                <div class="description">N/A</div>
+                  <div class="temp">Day: N/A °C</div>
+                <div class="temp">Night: N/A °C</div>
+            </div>
+        </div>
+        <!-- Day-5 forecast -->
+        <div class="future_weather" id="forecast">
+            <div class="Day">Day 5</div>
+                <img src="https://openweathermap.org/img/wn/02n.png" alt="Error 404" class="icon" />
+                <div class="description">N/A</div>
+                  <div class="temp">Day: N/A °C</div>
+                <div class="temp">Night: N/A °C</div>
+            </div>
+        </div>
+        <!-- Day-6 forecast -->
+        <div class="future_weather" id="forecast">
+            <div class="Day">Day 6</div>
+                <img src="https://openweathermap.org/img/wn/02n.png" alt="Error 404" class="icon" />
+                <div class="description">N/A</div>
+                  <div class="temp">Day: N/A °C</div>
+                <div class="temp">Night: N/A °C</div>
+            </div>
+        </div>
+        <!-- Day-7 forecast -->
+        <div class="future_weather" id="forecast">
+            <div class="Day">Day 7</div>
+                <img src="https://openweathermap.org/img/wn/02n.png" alt="Error 404" class="icon" />
+                <div class="description">N/A</div>
+                  <div class="temp">Day: N/A °C</div>
+                <div class="temp">Night: N/A °C</div>
+            </div>
+        </div>
+        <!-- (end) future-forecast div -->
+    </body>
+</html>
